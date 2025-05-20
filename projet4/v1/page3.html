@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet 4 - V1 - CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="qcm.css">
+</head>
+<body>
+    <header> 
+        <a class="button" id="b1" href="index.html">Accueil <hr></a> 
+        <a class="button" id="b2" href="page1.html">Python <hr></a> 
+        <a class="button" id="b3" href="page2.html">HTML <hr></a> 
+        <a class="button" id="b4" href="page4.html">GLua <hr></a> 
+        Le langage CSS <br><br>
+    </header>
+    <!-- PARTIE 4 -->
+    <div class="fond" id="ex-code">
+        <h1>Exemple de programme CSS</h1>
+        <hr class="small"> <br>
+        <img src="https://www.eric-page.info/images/style-opaque.png" width="380px"alt=""> 
+    </div>
+    <!-- PARTIE 5 -->
+    <div class="fond" id="face"> 
+        <h1>Håkon Wium Lie</h1>
+        <hr class="small"> <br>
+        <img src="https://i.iinfo.cz/urs/3135-m-121043717625784.jpg" width="200px"alt=""> 
+    </div>
+    <div class="overlay">
+        <!-- PARTIE 1 -->
+        <div class="fond">
+            <h1> D'où vient le CSS ? </h1>
+            <hr class="small">
+            <p>Le CSS (Cascading Style Sheets) a été créé par Håkon Wium Lie en 1994, alors qu'il était employé au CERN , l'organisation européenne pour la recherche nucléaire (est l'un des environnements informatiques scientifiques les plus exigeants du monde).</p>
+            <p>L'idée derrière le CSS était de séparer la présentation visuelle des pages web (couleurs, polices, mises en page) de leur structure HTML Cela permettait d'améliorer l'accessibilité, la maintenance du code et de rendre les pages plus flexibles.</p>
+            <p>Le concept de feuille de style est présent depuis l'origine du World Wide Web : le premier navigateur web WorldWideWeb.</p>
+            <p>La première spécification officielle a été publiée en 1996 par le W3C (World Wide Web Consortium).</p>
+        </div> <br>
+        <!-- PARTIE 2 -->
+        <div class="fond">
+            <h1> À quoi sert-il ? </h1>
+            <hr class="small">
+            <p>Le CSS permet de contrôler l’apparence des éléments HTML, comme les couleurs, les polices, les espacements, les bordures, les mises en page et même les animations. Il vient compléter le HTML en offrant une grande flexibilité pour styliser les pages web.</p>
+            <p>Grâce au CSS, on peut créer des designs cohérents et responsives, adaptés à différents appareils, qu’il s’agisse de bureaux, de tablettes ou de smartphones.</p>
+            <p>Il permet de séparer le contenu HTML de la présentation, facilitant ainsi la maintenance du code et améliorant l'accessibilité du site.</p>
+            <p>En résumé, le CSS rend les sites web non seulement esthétiques, mais aussi fonctionnels et parfaitement adaptés aux besoins des utilisateurs.</p>
+        </div> <br>
+        <!-- PARTIE 3 -->
+        <div class="fond">
+            <h1> Comment fonctionne-t-il ? </h1>
+            <hr class="small">
+            <p>Le CSS fonctionne en définissant des règles de style qui s'appliquent aux éléments HTML d'une page web. Voici comment il fonctionne concrètement :</p>
+            <ul>
+                <li>En CSS, les sélecteurs sont utilisés pour choisir (ou cibler) les éléments HTML auxquels on veut appliquer des styles. En d'autres termes, les sélecteurs permettent de dire "je veux changer ceci" dans la page web.</li>
+                <li>Propriétés et valeurs : Une fois un élément ciblé, on lui attribue des propriétés, comme la couleur, la taille de la police, l'espacement, etc. Chaque propriété a une valeur. Par exemple : color: red; ou font-size: 16px;.</li>
+                <li>Règles de style : Une règle CSS est un ensemble de sélecteurs, propriétés et valeurs. Par exemple :</li>
+            </ul>
+        </div> <br>
+
+        <!-- Bouton pour retourner en haut de la page -->
+        <div class="scroll-up">
+            <a href="#top"><img src="images/arrow_top.png"/></a>
+        </div>
+        <!-- Bouton pour afficher le QCM -->
+        <br> <button id="open-qcm" onclick="AfficherQCM()">Afficher le QCM</button>
+    </div>
+
+    <!-- Flou derrière le QCM -->
+    <div id="blur-overlay"></div>
+
+    <!-- Fenêtre du QCM -->
+    <div id="QCM">
+        <div id="QCM-Header">QCM</div>
+        
+        <!-- Entrée du nom -->
+        <fieldset>
+            <legend>Comment tu t'appelles ?</legend>
+            <input id="nameEntry" type="text">
+        </fieldset>
+        <!-- Question 1 -->
+        <fieldset>
+            <legend>Qui est le créateur du CSS ?</legend>
+            <div><input name="rep1" id="rep1" type="radio" /> <label class="choix"> Håkon Wium Lie. </label></div>
+            <div><input name="rep1" type="radio" /> <label class="choix"> Tim Berners-Lee. </label></div>
+            <div><input name="rep1" type="radio" /> <label class="choix"> Brendan Eich. </label></div>
+        </fieldset>
+        <!-- Question 2 -->
+        <fieldset>
+            <legend>Quel était le principal objectif de la création du CSS ?</legend>
+            <div><input name="rep2" type="radio" /> <label class="choix"> Ajouter de la sécurité aux pages web. </label></div>
+            <div><input name="rep2" type="radio" /> <label class="choix"> Créer un nouveau langage de programmation. </label></div>
+            <div><input name="rep2" id="rep2" type="radio" /> <label class="choix"> Séparer la présentation visuelle du HTML. </label></div>
+        </fieldset>
+        <!-- Question 3 -->
+        <fieldset>
+            <legend>Quelle organisation employait Håkon Wium Lie lorsqu’il a créé le CSS ?</legend>
+            <div><input name="rep3" id="rep3" type="radio" /> <label class="choix"> CERN. </label></div>
+            <div><input name="rep3" type="radio" /> <label class="choix"> NASA. </label></div>
+            <div><input name="rep3" type="radio" /> <label class="choix"> Google. </label></div>
+        </fieldset>
+        <!-- Boutons -->
+        <button onclick="FermerQCM()">Fermer</button>
+        <button onclick="ScoreObtenu()" id='submit-qcm'>Valider</button>
+        <button onclick="Init()" id='restart-qcm'>Recommencer</button>
+        <!-- Texte pour le score obtenu -->
+        <p id="reponse"></p>
+    </div>
+
+    <!-- Script du QCM -->
+    <script language="JavaScript" src="qcm.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet 4 - V1 - Python</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="qcm.css">
+</head>
+<body>
+    <header> 
+        <a class="button" id="b1" href="index.html">Accueil <hr></a> 
+        <a class="button" id="b2" href="page2.html">HTML <hr></a> 
+        <a class="button" id="b3" href="page3.html">CSS <hr></a> 
+        <a class="button" id="b4" href="page4.html">GLua <hr></a> 
+        Le langage Python <br><br>
+    </header>
+    <!-- PARTIE 5 -->
+    <div class="fond" id="ex-code">
+        <h1>Exemple de programme Python</h1>
+        <hr class="small">
+        <p>Voici un exemple simple qui affiche les nombres pairs jusqu'à 10 :</p>
+        <pre>   for i in range(1, 11):
+        if i % 2 == 0:
+            print(f"{i} est pair")
+        </pre>
+    </div>
+    <!-- PARTIE 6 -->
+    <div class="fond" id="face"> 
+        <h1>Guido Van Rossum</h1>
+        <hr class="small"> <br>
+        <img src="https://cdn.peteradamsphoto.com/wp-content/uploads/2019/03/21232359/GuidovanRossum20645.web_-720x900.jpg" width="200px"alt=""> 
+    </div>
+    <!-- PARTIE 7 -->
+    <div class="fond" id="ressources"> 
+        <h1>Ressources pour apprendre Python</h1>
+        <hr class="small"> <br>
+        <ul>
+            <li><a href="https://www.learnpython.org/" target="_blank">Learn Python</a> - Un site interactif pour apprendre les bases de Python.</li>
+            <li><a href="https://www.codecademy.com/learn/learn-python-3" target="_blank">Codecademy</a> - Cours interactifs sur Python et d'autres langages.</li>
+            <li><a href="https://www.w3schools.com/python/" target="_blank">W3Schools</a> - Tutoriels et références sur Python.</li>
+            <li><a href="https://www.python.org/doc/" target="_blank">Documentation officielle de Python</a> - La référence ultime pour tout ce qui concerne Python.</li>
+        </ul>
+    </div>
+    <div class="overlay">
+        <!-- PARTIE 1 -->
+        <div class="fond">
+            <h1>Python : Un langage pour tous les développeurs</h1>
+            <hr class="small">
+            <p>Explorez les fonctionnalités, l'histoire et les usages de Python, un langage incontournable.</p>
+        </div> <br>
+
+        <!-- PARTIE 2 -->
+        <div class="fond">
+            <h1>Origines de Python</h1>
+            <hr class="small">
+            <p>
+                Python a été créé en 1991 par Guido van Rossum, un développeur néerlandais, dans le but de rendre la programmation plus intuitive et accessible. Inspiré par le langage ABC, qu'il avait aidé à développer, il voulait créer un langage plus puissant, mais tout aussi simple à utiliser.
+                Le nom Python ne vient pas du serpent, mais de la troupe de comédie britannique Monty Python, que van Rossum appréciait particulièrement. Il a choisi ce nom en hommage à l'humour absurde et non conventionnel de leur émission Monty Python's Flying Circus, qui reflétait bien l'esprit du langage.
+                Le langage a rapidement gagné en popularité grâce à sa simplicité, sa lisibilité et sa capacité à s'adapter à de nombreux domaines, notamment le développement web, l'analyse de données et l'intelligence artificielle. Python continue aujourd'hui d'être l'un des langages les plus utilisés dans le monde de la programmation.
+            </p>
+        </div> <br>
+
+        <!-- PARTIE 3 -->
+        <div class="fond">
+            <h1>Pourquoi choisir Python ?</h1>
+            <hr class="small">
+            <ul>
+                <li>Lisibilité : Une syntaxe simple et claire, idéale pour les débutants.</li>
+                <li>Multiplateforme : Exécutable sur Windows, MacOS, Linux, et bien plus.</li>
+                <li>Communauté : Un vaste support grâce à une communauté active.</li>
+                <li>Extensibilité : Bibliothèques et frameworks pour chaque domaine.</li>
+            </ul>
+        </div> <br>
+
+        <!-- PARTIE 4 -->
+        <div class="fond">
+            <h1>Utilisations courantes de Python</h1>
+            <hr class="small">
+            <ol>
+                <li>Développement web : Frameworks populaires comme Django et Flask.</li>
+                <li>Science des données : Analyse avec NumPy, pandas, et Matplotlib.</li>
+                <li>IA et apprentissage automatique : TensorFlow, PyTorch, et scikit-learn.</li>
+                <li>Automatisation : Écriture de scripts pour des tâches répétitives.</li>
+            </ol>
+        </div>
+
+        <!-- Bouton pour retourner en haut de la page -->
+        <div class="scroll-up">
+            <a href="#top"><img src="images/arrow_top.png"/></a>
+        </div>
+
+        <!-- Bouton pour afficher le QCM -->
+        <br> <button id="open-qcm" onclick="AfficherQCM()">Afficher le QCM</button>
+    </div>
+
+    <!-- Flou derrière le QCM -->
+    <div id="blur-overlay"></div>
+
+    <!-- Fenêtre du QCM -->
+    <div id="QCM">
+        <div id="QCM-Header">QCM</div>
+        
+        <!-- Entrée du nom -->
+        <fieldset>
+            <legend>Comment tu t'appelles ?</legend>
+            <input id="nameEntry" type="text">
+        </fieldset>
+        <!-- Question 1 -->
+        <fieldset>
+            <legend>Python à été crée en l'année..</legend>
+            <div><input name="rep1" id="rep1" type="radio" /> <label class="choix"> 1991. </label></div>
+            <div><input name="rep1" type="radio" /> <label class="choix"> 1985. </label></div>
+            <div><input name="rep1" type="radio" /> <label class="choix"> 1995. </label></div>
+        </fieldset>
+        <!-- Question 2 -->
+        <fieldset>
+            <legend>Python à été crée par..</legend>
+            <div><input name="rep2" type="radio" /> <label class="choix"> Cristiano Ronaldo. </label></div>
+            <div><input name="rep2" id="rep2" type="radio" /> <label class="choix"> Guido van Rossum. </label></div>
+            <div><input name="rep2" type="radio" /> <label class="choix"> Ryan Dahl. </label></div>
+        </fieldset>
+        <!-- Question 3 -->
+        <fieldset>
+            <legend>Python est un language..</legend>
+            <div><input name="rep3" type="radio" /> <label class="choix"> Lent. </label></div>
+            <div><input name="rep3" id="rep3" type="radio" /> <label class="choix"> Simple. </label></div>
+            <div><input name="rep3" type="radio" /> <label class="choix"> Complexe. </label></div>
+        </fieldset>
+        <!-- Boutons -->
+        <button onclick="FermerQCM()">Fermer</button>
+        <button onclick="ScoreObtenu()" id='submit-qcm' >Valider</button>
+        <button onclick="Init()" id='restart-qcm'>Recommencer</button>
+        <!-- Texte pour le score obtenu -->
+        <p id="reponse"></p>
+    </div>
+
+    <!-- Script du QCM -->
+    <script language="JavaScript" src="qcm.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet 4 - V2 - GLua</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="qcm.css">
+</head>
+<body onload="Init(3)">
+    <header> 
+        <a class="button" id="b1" href="index.html">Accueil <hr></a> 
+        <a class="button" id="b2" href="page1.html">Python <hr></a> 
+        <a class="button" id="b3" href="page2.html">HTML <hr></a> 
+        <a class="button" id="b4" href="page3.html">CSS <hr></a> 
+        Le langage GLua <br><br>
+    </header>
+    <!-- PARTIE 5 -->
+    <div class="fond" id="ex-code">
+        <h1>Exemple de code en GLua</h1>
+        <hr class="small"> <br>
+        <img src="images/ex_glua.png" alt=""> 
+    </div>
+    <!-- PARTIE 6 -->
+    <div class="fond" id="face"> 
+        <h1>Garry Newman</h1>
+        <hr class="small"> <br>
+        <img src="https://static.wikia.nocookie.net/gmod/images/2/20/Garry_Newman.jpg/revision/latest?cb=20210507194518" alt=""> 
+    </div>
+    <!-- PARTIE 7 -->
+    <div class="fond" id="ressources"> 
+        <h1>Apprendre le GLua</h1>
+        <hr class="small"> <br>
+        <iframe width="420" height="315" style="display: block;margin: 0 auto;max-width: 100%"
+                src="https://www.youtube.com/embed/c1mQ3mpdiJU?si=UDNQasR39tX_MrOm">
+        </iframe>
+    </div>
+    <div class="overlay">
+        <!-- PARTIE 1 -->
+        <div class="fond">
+            <h1> Définition </h1>
+            <hr class="small">
+            <p>Le GLua est un langage de programmation basé sur Lua, conçu pour être utilisé principalement dans le contexte du développement de mods (modifications) et de scripts pour Garry's Mod, un jeu vidéo très populaire sur Steam. Garry's Mod, souvent abrégé en GMOD, permet aux joueurs de créer et de partager des contenus modifiés, allant des simples objets aux jeux entiers.</p>
+        </div> <br>
+        <!-- PARTIE 2 -->
+        <div class="fond">
+            <h1> Histoire du GLua </h1>
+            <hr class="small">
+            <p>Le GLua est en réalité une version spécifique de Lua utilisée dans Garry's Mod. Pour mieux comprendre son contexte, il est important de revenir à l'origine de Lua lui-même.</p>
+            <ul>
+                <li>Lua a été créé en 1993 à l'Université Pontificale Catholique de Rio de Janeiro, au Brésil, par des chercheurs et programmeurs tels que Roberto Ierusalimschy, Luiz Henrique de Figueiredo et Waldemar Celes. Son nom "Lua" signifie "lune" en portugais, et le langage a été conçu pour être léger, rapide et facilement extensible, principalement pour l'intégration dans des applications et des jeux vidéo.</li>
+                <li>Garry's Mod, créé par Garry Newman en 2004, a ensuite adopté Lua comme langage de script pour permettre aux joueurs de modifier et d'ajouter du contenu dans le jeu. Le langage Lua a été intégré pour sa simplicité et sa flexibilité, ce qui permet aux utilisateurs de créer une immense variété de mods et de fonctionnalités.</li>
+            </ul>
+        </div> <br>
+        <!-- PARTIE 3 -->
+        <div class="fond">
+            <h1> Fonctionnement du GLua </h1>
+            <hr class="small">
+            <p>Le GLua est une version modifiée de Lua conçue pour Garry's Mod. Il ajoute des extensions permettant de manipuler les objets, entités et mécaniques du jeu.</p>
+            <ul>
+                <li>Intégration avec le moteur Source : GLua permet d’interagir avec le moteur Source de Valve, comme créer des entités, gérer la physique ou modifier l’interface du jeu.</li>
+                <li>API de Garry's Mod : GLua propose une API riche pour accéder aux fonctions du jeu, incluant cartes, armes, véhicules, IA, etc.</li>
+                <li>Scripts client/serveur : Les scripts peuvent s’exécuter côté serveur (machine hôte) ou client (ordinateur du joueur), facilitant les interactions réseau.</li>
+                <li>Événements et hooks : GLua repose sur des événements déclenchés par le jeu (ex. : interaction, mort d’un joueur), gérés via des "hooks" pour personnaliser les comportements.</li>
+            </ul>
+        </div> <br>
+        <!-- PARTIE 4 -->
+        <div class="fond">
+            <h1> A quoi ça sert ? </h1>
+            <hr class="small">
+            <p>Le GLua a une grande utilité dans le monde de Garry's Mod. Il permet aux joueurs et aux développeurs de créer des expériences de jeu personnalisées, des mini-jeux, des outils et des extensions de gameplay. Voici quelques exemples d'utilisations de GLua : Développement de mini-jeux, Création d'outils d'administration, Modification des véhicules ou encore Création de pouvoirs magiques!</p>
+            <p>Le GLua peut être utilisé pour des projets indépendants ou pour en vendre les scripts à des particulier ou sur un marché (ex: <a href="https://www.gmodstore.com/">gmodstore</a>).</p>
+        </div> <br>
+
+        <!-- Bouton pour retourner en haut de la page -->
+        <div class="scroll-up">
+            <a href="#top"><img src="images/arrow_top.png"/></a>
+        </div>
+    </div>
+
+    <button id='open-qcm' onclick='ToggleQCM()'>Afficher le QCM</button>
+    <div id='QCM'>
+        <div id='QCM-Header'>QCM</div>
+        <!-- Entrée du nom -->
+        <fieldset><legend>Comment tu t'appelles ?</legend><input id='nameEntry' type='text'></fieldset>
+        <!-- Question 1 -->
+        <fieldset id="questionfield1">
+            <legend></legend>
+            <input type="radio" id="choix1" name="q1"> <label class="choix"></label> <br>
+            <input type="radio" id="choix2" name="q1"> <label class="choix"></label> <br>
+            <input type="radio" id="choix3" name="q1"> <label class="choix"></label> <br>
+            <input type="radio" id="choix4" name="q1"> <label class="choix"></label> <br>
+        </fieldset>
+        <!-- Question 2 -->
+        <fieldset id="questionfield2">
+            <legend></legend>
+            <input type="radio" id="choix1" name="q2"> <label class="choix"></label> <br>
+            <input type="radio" id="choix2" name="q2"> <label class="choix"></label> <br>
+        </fieldset>
+        <!-- Question 3 -->
+        <fieldset id="questionfield3">
+            <legend></legend>
+            <input type="radio" id="choix1" name="q3"> <label class="choix"></label> <br>
+            <input type="radio" id="choix2" name="q3"> <label class="choix"></label> <br>
+            <input type="radio" id="choix3" name="q3"> <label class="choix"></label> <br>
+        </fieldset>
+        <!-- Boutons -->
+        <button onclick="ToggleQCM()">Fermer</button>
+        <button onclick="ScoreObtenu()" id='submit-qcm' >Valider</button>
+        <button onclick="Init(3)" id='restart-qcm'>Recommencer</button>
+        <!-- Texte pour le score obtenu -->
+        <p id="reponse"></p>
+    </div>
+    <div id='blur-overlay'> </div>
+    <script language="JavaScript" src="qcm.js"></script>
+</body>
+</html>

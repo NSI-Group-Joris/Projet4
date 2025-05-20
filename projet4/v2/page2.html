@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet 4 - V2 - HTML</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="qcm.css">
+</head>
+<body onload="Init(1)">
+    <header> 
+        <a class="button" id="b1" href="index.html">Accueil <hr></a> 
+        <a class="button" id="b2" href="page1.html">Python <hr></a> 
+        <a class="button" id="b3" href="page3.html">CSS <hr></a> 
+        <a class="button" id="b4" href="page4.html">GLua <hr></a> 
+        Le langage HTML <br><br>
+    </header>
+    <!-- PARTIE 4 -->
+    <div class="fond" id="ex-code">
+        <h1>Exemple de programme HTML</h1>
+        <hr class="small"> <br>
+        <img src="https://www.pierre-giraud.com/wp-content/uploads/2019/05/html-attribut-name-formulaire.png" width="380px"alt=""> 
+    </div>
+    <!-- PARTIE 5 -->
+    <div class="fond" id="face"> 
+        <h1>Tim Berners-Lee</h1>
+        <hr class="small"> <br>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Sir_Tim_Berners-Lee_%28cropped%29.jpg" width="200px"alt=""> 
+    </div>
+    <div class="overlay">
+        <!-- PARTIE 1 -->
+        <div class="fond">
+            <h1> Un grand homme derrière un grand projet </h1>
+            <hr class="small">
+            <p>Tim Berners-Lee, né le 8 juin 1955 à Londres, est un physicien et informaticien britannique, principal inventeur du World Wide Web (WWW, le Web) alors qu'il travaillait à l'Organisation européenne pour la recherche nucléaire (CERN) au tournant des années 1990. Depuis 1994, il préside le World Wide Web Consortium (W3C), organisme qu'il a fondé. En juillet 2004, il est fait chevalier par la reine Élisabeth II. Il est lauréat du prix Turing 20161. En créant le Web, Tim Berners-Lee invente ses trois technologies fondatrices : les adresses Web sous forme d'URL, le protocole de communication HTTP, et le langage informatique HTML. Il fut aidé à ses débuts par l'ingénieur et informaticien belge Robert Cailliau qui cosigna notamment avec lui, en novembre 1990, un document désormais entré dans l'Histoire et intitulé « WorldWideWeb : Proposition pour un projet hypertexte.</p>
+            <p><a href="https://fr.wikipedia.org/wiki/Tim_Berners-Lee">(En savoir plus)</a></p>
+        </div> <br>
+        <!-- PARTIE 2 -->
+        <div class="fond">
+            <h1> A quoi sert le language HTML ? </h1>
+            <hr class="small">
+            <p> HTML (HyperText Markup Language) est un langage de balisage utilisé pour structurer le contenu d'une page web. Il permet de définir les éléments de base d'une page, comme les titres, paragraphes, images, liens, et formulaires, en les encapsulant dans des balises spécifiques. Bien qu'il ne s'occupe pas de la mise en forme détaillée, HTML fournit la structure essentielle à laquelle des technologies comme CSS et JavaScript viennent s'ajouter pour améliorer l'apparence et l'interactivité de la page. En résumé, HTML est indispensable pour créer la base de tout site web. </p>
+        </div> <br>
+        <!-- PARTIE 3 -->
+        <div class="fond">
+            <h1> Comment fonctionne le HTML ? </h1>
+            <hr class="small">
+            <ul>
+                <li>Le fonctionnement de HTML repose sur l'utilisation de balises pour structurer et organiser le contenu d'une page web. Lorsqu'un navigateur web charge une page HTML, il interprète ces balises pour afficher le contenu de manière visuelle.</li>
+                <li>Un document HTML commence par la déclaration "!DOCTYPE html", suivie de la balise "html", qui englobe tout le contenu. À l'intérieur, il y a généralement deux sections : l'en-tête "head" où l'on place des métadonnées, le titre de la page ou des liens vers des ressources externes comme le CSS, et le corps "body" où se trouve le contenu visible, comme les textes, images, vidéos et autres éléments interactifs. HTML organise ainsi le contenu d'une page, mais pour la mise en forme et les interactions, on utilise généralement CSS et JavaScript en complément.</li>
+                <li>Comment parler du language HTML sans parler de son acolyte le CSS, si vous êtes intéressé vous pouvez en apprendre plus <a href="page3.html">ici</a></li>
+            </ul>
+        </div> <br>
+
+        <!-- Bouton pour retourner en haut de la page -->
+        <div class="scroll-up">
+            <a href="#top"><img src="images/arrow_top.png"/></a>
+        </div>
+    </div>
+
+    <button id='open-qcm' onclick='ToggleQCM()'>Afficher le QCM</button>
+    <div id='QCM'>
+        <div id='QCM-Header'>QCM</div>
+        <!-- Entrée du nom -->
+        <fieldset><legend>Comment tu t'appelles ?</legend><input id='nameEntry' type='text'></fieldset>
+        <!-- Question 1 -->
+        <fieldset id="questionfield1">
+            <legend></legend>
+            <input type="radio" id="choix1" name="q1"> <label class="choix"></label> <br>
+            <input type="radio" id="choix2" name="q1"> <label class="choix"></label> <br>
+            <input type="radio" id="choix3" name="q1"> <label class="choix"></label> <br>
+        </fieldset>
+        <!-- Question 2 -->
+        <fieldset id="questionfield2">
+            <legend></legend>
+            <input type="radio" id="choix1" name="q2"> <label class="choix"></label> <br>
+            <input type="radio" id="choix2" name="q2"> <label class="choix"></label> <br>
+            <input type="radio" id="choix3" name="q2"> <label class="choix"></label> <br>
+        </fieldset>
+        <!-- Question 3 -->
+        <fieldset id="questionfield3">
+            <legend></legend>
+            <input type="radio" id="choix1" name="q3"> <label class="choix"></label> <br>
+            <input type="radio" id="choix2" name="q3"> <label class="choix"></label> <br>
+            <input type="radio" id="choix3" name="q3"> <label class="choix"></label> <br>
+        </fieldset>
+        <!-- Boutons -->
+        <button onclick="ToggleQCM()">Fermer</button>
+        <button onclick="ScoreObtenu()" id='submit-qcm' >Valider</button>
+        <button onclick="Init(1)" id='restart-qcm'>Recommencer</button>
+        <!-- Texte pour le score obtenu -->
+        <p id="reponse"></p>
+    </div>
+    <div id='blur-overlay'> </div>
+    <script language="JavaScript" src="qcm.js"></script>
+</body>
+</html>
